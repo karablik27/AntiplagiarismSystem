@@ -1,0 +1,84 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: textscanner_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: textscanner
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d textscanner"]
+      interval: 5s
+      retries: 5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  file-storing:
+    build:
+      context: ./FileStoringService
+      dockerfile: Dockerfile
+    container_name: file-storing
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__Default: "Host=postgres;Port=5432;Username=user;Password=pass;Database=textscanner"
+    ports:
+      - "5017:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 5s
+      retries: 3
+    volumes:
+      - stored_files:/app/StoredFiles
+
+  file-analysis:
+    build:
+      context: ./FileAnalysisService
+      dockerfile: Dockerfile
+    container_name: file-analysis
+    depends_on:
+      postgres:
+        condition: service_healthy
+      file-storing:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__Default: "Host=postgres;Port=5432;Username=user;Password=pass;Database=textscanner"
+      FileStoring__BaseUrl: "http://file-storing"
+      WordCloud__BaseUrl: "https://quickchart.io"
+    ports:
+      - "5002:80"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 5s
+      retries: 3
+    volumes:
+      - stored_files:/app/StoredFiles
+
+  api-gateway:
+    build:
+      context: ./ApiGateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    depends_on:
+      file-storing:
+        condition: service_healthy
+      file-analysis:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_URLS: http://+:80
+      Downstreams__FileStoring: "http://file-storing"
+      Downstreams__FileAnalysis: "http://file-analysis"
+    ports:
+      - "5005:80"
+
+volumes:
+  postgres_data:
+  stored_files:

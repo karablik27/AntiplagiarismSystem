@@ -1,0 +1,54 @@
+﻿<Properties StartupConfiguration="{30A3C29E-3802-41D9-9928-B5FEE98E9912}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FileAnalysisService/appsettings.json">
+    <Files>
+      <File FileName="FileStoringService/Models/FileEntry.cs" Line="14" Column="1" />
+      <File FileName="FileStoringService/Data/FilesDbContext.cs" Line="14" Column="6" />
+      <File FileName="FileStoringService/Program.cs" Line="22" Column="22" />
+      <File FileName="FileStoringService/appsettings.json" Line="13" Column="1" />
+      <File FileName="docker-compose.yml" Line="11" Column="20" />
+      <File FileName="FileStoringService/appsettings.Development.json" Line="10" Column="1" />
+      <File FileName="FileStoringService/Dockerfile" Line="20" Column="1" />
+      <File FileName="FileStoringService/Properties/launchSettings.json" Line="15" Column="8" />
+      <File FileName="FileStoringService/Controllers/FilesController.cs" Line="19" Column="1" />
+      <File FileName="FileAnalysisService/Models/AnalysisResult.cs" Line="8" Column="17" />
+      <File FileName="FileAnalysisService/Data/AnalysisDbContext.cs" Line="13" Column="2" />
+      <File FileName="FileAnalysisService/Program.cs" Line="42" Column="1" />
+      <File FileName="FileAnalysisService/appsettings.json" Line="12" Column="6" />
+      <File FileName="FileAnalysisService/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="FileAnalysisService/Controllers/AnalysisController.cs" Line="111" Column="44" />
+      <File FileName="FileStoringService/Migrations/20250520164139_Init.cs" Line="1" Column="1" />
+      <File FileName="FileStoringService/Migrations/FilesDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="FileStoringService/StoredFiles/32ab617d-61cf-4c33-9fbf-206ad047a94e.txt" Line="1" Column="1" />
+      <File FileName="FileStoringService/StoredFiles/96d71449-09e1-4f82-966e-6643ba6a7e08.txt" Line="1" Column="1" />
+      <File FileName="FileAnalysisService/Dockerfile" Line="27" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AntiplagiarismSystem" expanded="True">
+            <Node name="FileAnalysisService" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+            <Node name="FileStoringService" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Tests FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FileStoringService PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

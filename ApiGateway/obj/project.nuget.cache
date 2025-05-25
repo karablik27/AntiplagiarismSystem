@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "1/rtGQsGMWZ0N/w3IHpyesZH1nX5+51Nwy7uJFtALuuJF0nXP9prtnLe6Zk0hZbPw3/+rJ0gS1Uza+fBJV1NBA==",
+  "success": true,
+  "projectFilePath": "/Users/verhovnyjmag/Projects/AntiplagiarismSystem/ApiGateway/ApiGateway.csproj",
+  "expectedPackageFiles": [
+    "/Users/verhovnyjmag/.nuget/packages/microsoft.aspnetcore.openapi/7.0.10/microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/system.io.hashing/7.0.0/system.io.hashing.7.0.0.nupkg.sha512",
+    "/Users/verhovnyjmag/.nuget/packages/yarp.reverseproxy/2.0.0/yarp.reverseproxy.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
